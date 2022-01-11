@@ -20,9 +20,9 @@ public class Paciente {
 		if (paciente == null) {
 			throw new NullPointerException("ERROR: No es posible copiar un paciente nulo.");
 		}
-		setNombre(paciente.nombre);
-		setDni(paciente.dni);
-		setTelefono(paciente.telefono);
+		setNombre(paciente.getNombre());
+		setDni(paciente.getDni());
+		setTelefono(paciente.getTelefono());
 		
 	}
 	// Metodo formateanombre
