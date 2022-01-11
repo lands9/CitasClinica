@@ -96,8 +96,9 @@ public class Paciente {
 		Pattern p = Pattern.compile(ER_TELEFONO);
 		Matcher m;
 		m = p.matcher(telefono);
-			if (m.matches()) {
+			if (m.matches() && (telefono.charAt(0) == '6' || telefono.charAt(0) == '9')) {
 				this.telefono = telefono;
+			
 			}else {
 				throw new IllegalArgumentException("ERROR: El teléfono no tiene un formato válido.");
 			}
