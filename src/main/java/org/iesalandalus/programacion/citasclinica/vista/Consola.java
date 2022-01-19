@@ -1,6 +1,5 @@
 package org.iesalandalus.programacion.citasclinica.vista;
 
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -96,7 +95,7 @@ public class Consola {
 		boolean fechaValida = false;
 		do {
 			try {
-				System.out.println("Introduzca una fecha y hora con el siguiente formato: dd/MM/yyyy HH:mm  :");
+				System.out.println("Introduzca una fecha y hora con el siguiente formato: dd/MM/yyyy :");
 				fecha = LocalDate.parse(Entrada.cadena(), formatoFecha);
 				fechaValida=true;
 			}catch(DateTimeParseException e) {

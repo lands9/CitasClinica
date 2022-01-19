@@ -25,7 +25,7 @@ public class Citas {
 	}
 
 	private boolean capacidadSuperada(int numCitas) {
-		return numCitas >= capacidad;
+		return numCitas >= getCapacidad();
 	}
 
 
@@ -95,11 +95,11 @@ public class Citas {
 	}
 
 	private void desplazarUnaPosicionHaciaIzquierda(int indice) throws IllegalArgumentException {
-		for (int i = indice; !tamanoSuperado(i); i++) 
+		for (int i = indice; i < coleccionCitas.length - 1; i++) 
 		{
 			coleccionCitas[i] = coleccionCitas[i + 1];
 		}
-		tamano--;
+		
 	}
 
 	public void borrar(Cita cita) throws OperationNotSupportedException {
@@ -115,7 +115,7 @@ public class Citas {
 			throw new OperationNotSupportedException("ERROR: No existe ninguna cita para esa fecha y hora.");
 		}
 
-		
+		tamano--;
 
 	}
 
